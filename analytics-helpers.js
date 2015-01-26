@@ -8,12 +8,12 @@ $(document).on("click", "[data-provides=analytics]", function(evt) {
 
   // These aren't used yet. We don't have functionality to
   // send the label and value parameters.
-  default_options = {
+  var default_options = {
     label: null,
     value: null
   };
 
-  data = $(this).data()
+  var data = $(this).data()
 
   if(data.category && data.action) {
     ga("send", "event", data.category, data.action);
